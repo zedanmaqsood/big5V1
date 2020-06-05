@@ -8,8 +8,8 @@ $(function () {
 
 	//submit state is used while validation and changing the css of un ans quest 
 	submitState = false;
-	//enumerating 
 
+	//enumerating 
 	enumera = {
 		1:'dis',
 		2:'slytDis',
@@ -54,8 +54,8 @@ $(function () {
 
 	submitBtn = "<div id=\"submit\" class=\"button\"><a href=\"#\">submit</a></div>";
 	nextBtn = "<div id=\"next\" class=\"button\"><a href=\"#\">next</a></div>";
-	prevBtn = "<div id=\"previous\" class=\"button\"><a href=\"#\">previous</a></div>"
-	retakeBtn = "<div id=\"retake\" class=\"button\"><a href=\"#\">Retake the Test</a></div>"
+	prevBtn = "<div id=\"previous\" class=\"button\"><a href=\"#\">previous</a></div>";
+	retakeBtn = "<div id=\"retake\" class=\"button\"><a href=\"#\">Retake the Test</a></div>";
 
 	ansHistory = new Array();//for storing previouse answers
 	resultHistory = new Array();
@@ -96,7 +96,7 @@ $(function () {
 		$('.page').append(finalHtml);
 		markAnswered();
 		//this is only for testing
-		populator();
+		//populator();
 
 	}
 
@@ -116,10 +116,6 @@ $(function () {
 		}
 	}
 
-	function computeResult() {
-		// computes the result of the current answerValue set returns an object with result
-
-	}
 
 	function saveUnAns(){
 		//scans the current page on transiton to tother and check of un ticked radios and
@@ -232,10 +228,9 @@ $(function () {
 			key = entry[0];
 			value = entry[1];
 			valuePercent = Math.floor((entry[1]/40)*100);
-			console.log(key,value,valuePercent)
 			htmlCode += "<li><h3>"+key+"</h3>"+"<div class=\"progressBar\">";
-            htmlCode += "<span style=\"width:"+valuePercent+"%;background-color:"+colors[i++]+";\">";
-            htmlCode += "<span>"+value+"</span></span></div></li>";
+            		htmlCode += "<span style=\"width:"+valuePercent+"%;background-color:"+colors[i++]+";\">";
+            		htmlCode += "<span>"+value+"</span></span></div></li>";
 		});
 		htmlCode +="</ul>";
 		$('.page').css({
@@ -247,7 +242,7 @@ $(function () {
 	}
 
 	function populator(){
-		//this function populates the form for tsting puropes
+		//this function populates the form for tsting purpose
 		//to be called inside the loadpage()function
 		$li = $('li');
 		$li.each(function(){
