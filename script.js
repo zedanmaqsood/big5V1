@@ -96,7 +96,7 @@ $(function () {
 		$('.page').append(finalHtml);
 		markAnswered();
 		//this is only for testing
-		//populator();
+		populator();
 
 	}
 
