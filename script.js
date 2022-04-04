@@ -203,10 +203,10 @@ $(function () {
 	function computeResult(){
 		var extro,agreeness,consci,neuro,openess,result;
 		extro = computeScore(20,0,5);
-		agreeness = computeScore(14,6,1);
-		consci = computeScore(14,2,7);
-		neuro = computeScore(38,8,3);
-		openess = computeScore(8,4,9);
+		agreeness = computeScore(20,6,1);
+		consci = computeScore(20,2,7);
+		neuro = computeScore(20,8,3);
+		openess = computeScore(20,4,9);
 		result = {
 			'Extraversion':extro,
 			'Agreeableness':agreeness,
@@ -239,7 +239,7 @@ $(function () {
 			valuePercent = Math.floor((entry[1]/40)*100);
 			htmlCode += "<li><h3>"+key+"</h3>"+"<div class=\"progressBar\">";
             htmlCode += "<span style=\"width:"+valuePercent+"%;background-color:"+colors[i++]+";\">";
-            htmlCode += "<span>"+value+"</span></span></div></li>";
+            htmlCode += "<span>"+valuePercent+"</span></span></div></li>";
 		});
 		htmlCode +="</ul>";
 		$('.page').css({
